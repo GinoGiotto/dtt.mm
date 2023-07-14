@@ -1288,7 +1288,7 @@ $)
 
   $( The conditional (bool recursor).
      (Contributed by Mario Carneiro, 14-Mar-2016.) $)
-  kcd $a |- cond i : \ x : Type i , ( two -> ( x -> ( x -> x ) ) ) $.
+  kcd1 $a |- cond i : \ x : Type i , ( bool -> ( x -> ( x -> x ) ) ) $.
 
   ${
     dett.1 $e |- ( ph |= OA : Type i ) $.
@@ -1315,6 +1315,8 @@ $)
   $c sigma1 $.
   $c sigma2 $.
   $c pair $.
+  $c 1st $.
+  $c 2nd $.
 
   $( The sigma type, the equivalent of an indexed disjoint union in ZFC.
      (Contributed by Mario Carneiro, 26-Feb-2016.) $)
@@ -1335,7 +1337,7 @@ $)
   $( Type of the sigma type.
        (Contributed by Mario Carneiro, 26-Feb-2016.) $)
   ksig $a |- sigma i j : \ x : Type i , \ y : ( x -> Type j ) ,
-             Type max suc u0 max i j ) $.
+            ( Type max suc u0 max i j ) $.
 
   $( Type of the first component function.
        (Contributed by Mario Carneiro, 26-Feb-2016.) $)
@@ -1421,16 +1423,16 @@ althtmldir "../holuni/";
 
 htmldef "wff" as '<FONT COLOR="#808080">wff </FONT>';
   althtmldef "wff" as '<FONT COLOR="#808080">wff </FONT>';
-  latexdef "wff" as "{\rm wff}";
+  latexdef "wff" as "\mathrm{wff}";
 htmldef "var" as '<FONT COLOR="#808080">var </FONT>';
   althtmldef "var" as '<FONT COLOR="#808080">var </FONT>';
-  latexdef "var" as "{\rm var}";
+  latexdef "var" as "\mathrm{var}";
 htmldef "type" as '<FONT COLOR="#808080">type </FONT>';
   althtmldef "type" as '<FONT COLOR="#808080">type </FONT>';
-  latexdef "type" as "{\rm type}";
+  latexdef "type" as "\mathrm{type}";
 htmldef "term" as '<FONT COLOR="#808080">term </FONT>';
   althtmldef "term" as '<FONT COLOR="#808080">term </FONT>';
-  latexdef "term" as "{\rm term}";
+  latexdef "term" as "\mathrm{term}";
 htmldef "|-" as
     "<IMG SRC='_vdash.gif' WIDTH=10 HEIGHT=19 ALT='|-' ALIGN=TOP> ";
   althtmldef "|-" as
@@ -1575,13 +1577,13 @@ htmldef "?!" as "<IMG SRC='_e1.gif' WIDTH=12 HEIGHT=19 ALT='E!' ALIGN=TOP>";
   latexdef "?!" as "\exists{!}";
 htmldef "typedef" as "typedef ";
   althtmldef "typedef" as 'typedef ';
-  latexdef "typedef" as "\mbox{typedef }";
+  latexdef "typedef" as "\text{ typedef }";
 htmldef "1-1" as "1-1 ";
   althtmldef "1-1" as '1-1 ';
-  latexdef "1-1" as "\mbox{1-1 }";
+  latexdef "1-1" as "\mathrm{1-1}";
 htmldef "onto" as "onto ";
   althtmldef "onto" as 'onto ';
-  latexdef "onto" as "\mbox{onto }";
+  latexdef "onto" as "\mathrm{onto}";
 htmldef "@" as
     "<IMG SRC='varepsilon.gif' WIDTH=8 HEIGHT=19 ALT='@' ALIGN=TOP>";
   althtmldef "@" as '&epsilon;';
@@ -1591,5 +1593,3 @@ htmldef "@" as
 $)
 
 $( 456789012345 (79-character line to adjust text window width) 567890123456 $)
-
-
